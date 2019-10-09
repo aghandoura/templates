@@ -49,7 +49,7 @@ add_custom_target(run
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/out
 )
 
-add_custom_target(test
+add_custom_target(run_test
     ./AllTests
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/out
 )

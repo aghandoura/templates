@@ -44,6 +44,17 @@ include_directories( ${GTEST_INCLUDE_DIRS} )
 #  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3")
 #endif()
 
+add_custom_target(run
+    ./FooMain
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/out
+)
+
+add_custom_target(test
+    ./AllTests
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/out
+)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/out)
+
 add_subdirectory( src )
 add_subdirectory( test )
 add_subdirectory( ressources )
